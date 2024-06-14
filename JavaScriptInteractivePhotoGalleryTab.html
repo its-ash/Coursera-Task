@@ -80,14 +80,17 @@
                         <div class="row justify-content-center mt-2">
                                 <div class="col-3">
                                         <img class="collection" index="4"
-                                                src="https://images.pexels.com/photos/1996333/pexels-photo-1996333.jpeg?cs=srgb&dl=pexels-wildlittlethingsphoto-1996333.jpg&fm=jpg" alt="Horse Image">
+                                                src="https://images.pexels.com/photos/1996333/pexels-photo-1996333.jpeg?cs=srgb&dl=pexels-wildlittlethingsphoto-1996333.jpg&fm=jpg"
+                                                alt="Horse Image">
                                 </div>
                                 <div class="col-3">
                                         <img class="collection" index="5"
-                                                src="https://media.istockphoto.com/id/1398704456/vector/cute-unicorn-sitting-cartoon-vector-illustration.jpg?s=612x612&w=0&k=20&c=_aJqOrSqf9v_u8vFI3GfmgPzfAe36HHTNOGvrl7Aqis=" alt="Unicorn Image">
+                                                src="https://media.istockphoto.com/id/1398704456/vector/cute-unicorn-sitting-cartoon-vector-illustration.jpg?s=612x612&w=0&k=20&c=_aJqOrSqf9v_u8vFI3GfmgPzfAe36HHTNOGvrl7Aqis="
+                                                alt="Unicorn Image">
                                 </div>
                                 <div class="col-3">
-                                        <img class="collection" index="6" src="https://cdn.pixabay.com/photo/2023/05/12/10/47/ai-generated-7988262_1280.jpg"
+                                        <img class="collection" index="6"
+                                                src="https://cdn.pixabay.com/photo/2023/05/12/10/47/ai-generated-7988262_1280.jpg"
                                                 alt="Picachu Image">
                                 </div>
                         </div>
@@ -101,16 +104,16 @@
                 let currentIndex = 1;
 
                 document.addEventListener('keydown', (evt) => {
-                        if (evt.key === 'Tab'){
+                        if (evt.key === 'Tab') {
                                 currentIndex = parseInt(currentIndex) + 1;
-                                if (currentIndex > 6){
+                                if (currentIndex > 6) {
                                         currentIndex = 1;
                                 }
                                 evt.preventDefault();
                                 const collection = document.querySelector(`[index="${currentIndex}"]`);
                                 viewer.innerHTML = `<img src="${collection.src}" style="width:100%;height:100%" alt="${collection.alt}">`;
                                 title.innerHTML = collection.alt;
-                                
+
                         }
                 });
 
